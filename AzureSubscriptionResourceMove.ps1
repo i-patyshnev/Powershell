@@ -10,7 +10,7 @@ Param (
     .EXAMPLE
         Run with key -Mode Move to move resources
         You could confirm or decline export list of resources as json
-        PS C:\> Move-Valid.ps1 -Mode Move
+        PS C:\> AzureSubscriptionResourceMove.ps1 -Mode Move
     #>
 
 # List of excluded resources
