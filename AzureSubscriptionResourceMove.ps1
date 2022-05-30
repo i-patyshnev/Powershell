@@ -6,7 +6,7 @@ Param (
 
     <#
     .SYNOPSIS
-        Function to call Azure Resource Validation and Move API
+        Function to call Azure Resource Validation and Move API for moving resource groups between subscriptions
     .EXAMPLE
         Run with key -Mode Move to move resources
         You could confirm or decline export list of resources as json
