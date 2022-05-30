@@ -6,7 +6,7 @@ Param (
 
     <#
     .SYNOPSIS
-        Script for мalidation and moving resource groups between subscriptions
+        Script for validation and moving resource groups between subscriptions
     .DESCRIPTION
         Enter SubscriptionID and Resource Groups in first section
         Run with key -Mode Move to move resources
