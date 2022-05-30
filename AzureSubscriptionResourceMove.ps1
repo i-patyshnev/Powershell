@@ -8,6 +8,7 @@ Param (
     .SYNOPSIS
         Script for мalidation and moving resource groups between subscriptions
     .DESCRIPTION
+        Enter SubscriptionID and Resource Groups in first section
         Run with key -Mode Move to move resources
         You could confirm or decline export list of resources as json
     .EXAMPLE
@@ -16,13 +17,14 @@ Param (
         https://github.com/i-patyshnev/Powershell/blob/main/AzureSubscriptionResourceMove.ps1
     #>
 
-# List of excluded resources
-$excludedResourceTypes = @('Microsoft.Synapse/workspaces')
-
+# Enter SubscriptionID and Resource Groups here
 $SourceSubscriptionID = '<Enter your Source Subscription ID>'
 $SourceResourceGroupName = '<Enter your Source Resource Group Name>'
 $TargetSubscriptionID = '<Enter your Target Subscription ID>'
 $TargetResourceGroupName = '<Enter your Target Resource Group Name>'
+
+# List of excluded resources
+$excludedResourceTypes = @('Microsoft.Synapse/workspaces')
 
 function Get-AzureValidateResourceMoveResult
 {
@@ -215,4 +217,6 @@ $ResourcesData = @{
 }
 
 Get-AzureValidateResourceMoveResult @ResourcesData
+
+
 #endregion Main
