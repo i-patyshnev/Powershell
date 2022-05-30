@@ -6,11 +6,14 @@ Param (
 
     <#
     .SYNOPSIS
-        Function to call Azure Resource Validation and Move API for moving resource groups between subscriptions
-    .EXAMPLE
+        Script for мalidation and moving resource groups between subscriptions
+    .DESCRIPTION
         Run with key -Mode Move to move resources
         You could confirm or decline export list of resources as json
+    .EXAMPLE
         PS C:\> AzureSubscriptionResourceMove.ps1 -Mode Move
+    .LINK
+        https://github.com/i-patyshnev/Powershell/blob/main/AzureSubscriptionResourceMove.ps1
     #>
 
 # List of excluded resources
@@ -212,6 +215,4 @@ $ResourcesData = @{
 }
 
 Get-AzureValidateResourceMoveResult @ResourcesData
-
-
 #endregion Main
