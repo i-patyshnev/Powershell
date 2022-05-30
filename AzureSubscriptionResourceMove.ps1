@@ -143,7 +143,6 @@ function Get-AzureResourceMoveResult
 }
 
 
-
 #region Main
  # Checking for login on Azure
  $currentContext = (Get-AzContext).Subscription.SubscriptionId
@@ -217,6 +216,4 @@ $ResourcesData = @{
 }
 
 Get-AzureValidateResourceMoveResult @ResourcesData
-
-
 #endregion Main
